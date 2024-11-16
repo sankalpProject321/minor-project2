@@ -17,6 +17,14 @@ const reservationSchema = new mongoose.Schema({
   date: {
     type: String,
     required: true,
+    validate: {
+      validator: function(value) {
+        const currentDate = new Date();
+        const selectedDate = new Date(value);
+        return selectedDate >= currentDate; // Date must be today or in the future
+      },
+      message: "Reservation date cannot be in the past."
+    }
   },
   time: {
     type: String,
@@ -30,8 +38,8 @@ const reservationSchema = new mongoose.Schema({
   phone: {
     type: String,
     required: true,
-    minLength: [11, "Phone number must contain 11 Digits."],
-    maxLength: [11, "Phone number must contain 11 Digits."],
+    minLength: [10, "Phone number must contain 10 Digits."],
+    maxLength: [10, "Phone number must contain 10 Digits."],
   },
 });
 
