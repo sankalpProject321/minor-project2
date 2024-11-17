@@ -19,7 +19,7 @@ const Reservation = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://minor-project-backend-nine.vercel.app/reservation/send",
+        "https://minor-project-backend-five.vercel.app/reservation/send",
         { firstName, lastName, email, phone, date, time },
         {
           headers: {
