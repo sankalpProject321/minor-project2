@@ -19,7 +19,7 @@ const Reservation = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://minor-project-backend-9i4e.onrender.com",
+        "https://minor-project-backend-nine.vercel.app",
         { firstName, lastName, email, phone, date, time },
         {
           headers: {
