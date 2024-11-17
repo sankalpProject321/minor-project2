@@ -10,7 +10,7 @@ dotenv.config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: ["https://minor-project-frontend-delta.vercel.app"],
+    origin: ["https://minor-project-frontend-two.vercel.app"],
     methods: ["POST"],
     credentials: true,
   })
