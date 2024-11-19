@@ -10,13 +10,13 @@ dotenv.config({ path: "./config/config.env" });
 
 app.use(cors({
   origin:[process.env.FRONTEND_URL],
-  methods:["POST","GET"]
+  credentials: true
 }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/v1/reservation", reservationRouter);
+app.use("/api/reservation", reservationRouter);
 app.get("/", (req, res, next)=>{return res.status(200).json({
   success: true,
   message: "HELLO WORLD AGAIN"
