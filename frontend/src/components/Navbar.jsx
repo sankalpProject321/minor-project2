@@ -34,7 +34,9 @@ const Navbar = () => {
               Reservation
             </NavLink>
           </div>
-          <button className="menuBtn"><a href="/menu">menu</a></button>
+         <button className="menuBtn">   <NavLink to="/menu">
+              menu
+            </NavLink></button>
         </div>
         <div className="hamburger" onClick={() => setShow(!show)}>
           <GiHamburgerMenu />
